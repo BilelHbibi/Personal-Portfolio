@@ -1,0 +1,76 @@
+import React from "react";
+import PropTypes from "prop-types";
+
+const ButtonPrimary = ({
+  href,
+  target = "_self",
+  label,
+  icon = "",
+  classes = "",
+}) => {
+  const IconSpan = icon ? (
+    <span className="material-symbols-rounded" aria-hidden="true">
+      {icon}
+    </span>
+  ) : null;
+
+  if (href) {
+    return (
+      <a href={href} target={target} className={`btn btn-primary ${classes}`}>
+        {label} {IconSpan}
+      </a>
+    );
+  } else {
+    return (
+      <button className={`btn btn-primary ${classes}`}>
+        {label} {IconSpan}
+      </button>
+    );
+  }
+};
+
+ButtonPrimary.propTypes = {
+  label: PropTypes.string.isRequired,
+  href: PropTypes.string,
+  target: PropTypes.string,
+  icon: PropTypes.string,
+  classes: PropTypes.string,
+};
+
+const ButtonOutline = ({
+  href,
+  target = "_self",
+  label,
+  icon = "",
+  classes = "",
+}) => {
+  const IconSpan = icon ? (
+    <span className="material-symbols-rounded" aria-hidden="true">
+      {icon}
+    </span>
+  ) : null;
+
+  if (href) {
+    return (
+      <a href={href} target={target} className={`btn btn-Outline ${classes}`}>
+        {label} {IconSpan}
+      </a>
+    );
+  } else {
+    return (
+      <button className={`btn btn-Outline ${classes}`}>
+        {label} {IconSpan}
+      </button>
+    );
+  }
+};
+
+ButtonOutline.propTypes = {
+  label: PropTypes.string.isRequired,
+  href: PropTypes.string,
+  target: PropTypes.string,
+  icon: PropTypes.string,
+  classes: PropTypes.string,
+};
+
+export { ButtonPrimary, ButtonOutline };
