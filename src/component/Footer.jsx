@@ -20,7 +20,7 @@ const Footer = () => {
   const handleLanguageChange = (lang) => {
     localStorage.setItem("lang", lang);
     window.location.reload();
-    window.location.href = "/home";
+    window.location.href = "/";
   };
   
 
@@ -101,10 +101,10 @@ const Footer = () => {
           </a>
 
           {/* Custom Language Dropdown */}
-          <div className="relative" ref={dropdownRef}>
+          <div className="relative mt-7" ref={dropdownRef}>
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="flex items-center gap-2 px-4 py-2 border border-zinc-600 rounded-md bg-zinc-800 text-white hover:bg-zinc-700 transition mt-7 ml-2"
+              className="flex items-center gap-2 px-4 py-2 border border-zinc-600 rounded-md bg-zinc-800 text-white hover:bg-zinc-700 transition ml-2"
             >
               <img
                 src={
@@ -159,7 +159,7 @@ const Footer = () => {
             )}
           </div>
 
-          <p className="text-zinc-500 text-8 reveal-up ">
+          <p className="text-zinc-500 text-8 reveal-up">
             &copy; 2025 <span className="text-zinc-200">Bilel Habibi</span>
           </p>
         </div>
