@@ -20,7 +20,6 @@ const Footer = () => {
   const handleLanguageChange = (lang) => {
     localStorage.setItem("lang", lang);
     window.location.reload();
-    window.location.href = "/";
   };
   
 
