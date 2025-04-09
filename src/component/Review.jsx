@@ -32,7 +32,6 @@ const reviews = [
     name: "React Framework",
     imgSrc: "/images/dyma-icon.png",
     societe: "Dyma",
-    downloadLink: "/images/Certificat-react.pdf",
     imageLink: "/images/Certificat-react.jpg",
   },
 ];
@@ -42,7 +41,7 @@ const reviews = [
       <div className="container">
         <h2 className="headline-2 mb-8 reveal-up">{t.ourCertifications}</h2>
         <div className="grid gap-x-3 gap-y-4 grid-cols-[repeat(auto-fill,_minmax(320px,_1fr))]">
-          {reviews.map(({ content, name, imgSrc, societe, downloadLink, imageLink }, key) => (
+          {reviews.map(({ content, name, imgSrc, societe, imageLink }, key) => (
             <ReviewCard
               key={key}
               index={key}
@@ -50,7 +49,6 @@ const reviews = [
               content={content}
               imgSrc={imgSrc}
               societe={societe}
-              downloadLink={downloadLink}
               imageLink={imageLink}
             />
           ))}

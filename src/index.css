@@ -243,3 +243,23 @@ html {
 .eyboard_arrow_downk{
   background-color: red;
 }
+
+.last .logo{
+  margin-top: -7px;
+}
+.last p{
+  margin-top: -5px;
+}
+
+@media screen and (max-width: 640px) {
+  .last .relative .ln {
+    margin-top: 0.2rem;
+  }
+  .last .logo{
+    margin-top: -8px;
+  }
+  .last p{
+    margin-top: 0.5px;
+  }
+}
+

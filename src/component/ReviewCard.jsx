@@ -7,7 +7,6 @@ const ReviewCard = ({
   imgSrc,
   societe,
   index,
-  downloadLink,
   imageLink,
 }) => {
   const [isFullScreen, setIsFullScreen] = useState(false);
@@ -34,15 +33,6 @@ const ReviewCard = ({
     };
   }, [isFullScreen]);
 
-  // Handle image download
-  const handleDownload = () => {
-    const link = document.createElement("a");
-    link.href = downloadLink;
-    link.download = downloadLink.split("/").pop(); // Extract file name from path
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
 
   // Open image in full-screen mode
   const handleFullScreen = () => {
@@ -96,14 +86,7 @@ const ReviewCard = ({
 
           {/* Buttons */}
           <div className="flex items-center">
-            <button
-              className="flex items-center gap-2 bg-gray-700 text-white px-3 py-2 rounded-lg hover:bg-gray-600 mr-2"
-              onClick={handleDownload}
-            >
-              <span className="material-symbols-rounded text-2xl">
-                download
-              </span>
-            </button>
+      
             <button
               className="flex items-center gap-2 bg-gray-700 text-white px-3 py-2 rounded-lg hover:bg-gray-600"
               onClick={handleFullScreen}
@@ -145,7 +128,6 @@ ReviewCard.propTypes = {
   name: PropTypes.string.isRequired,
   index: PropTypes.number.isRequired,
   societe: PropTypes.string.isRequired,
-  downloadLink: PropTypes.string.isRequired,
   imageLink: PropTypes.string.isRequired, // Ensure this is a string
 };
 

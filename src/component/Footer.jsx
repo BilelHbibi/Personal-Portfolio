@@ -99,7 +99,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="flex justify-between mt-10 mb-15">
+        <div className="flex justify-between mt-10 mb-15 last">
           <a href="/" className="logo reveal-up">
             <img src="./images/logo.svg" width={40} height={40} alt="logo" />
           </a>
@@ -108,7 +108,7 @@ const Footer = () => {
           <div className="relative" ref={dropdownRef}>
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="flex items-center gap-2 px-4 py-2 border border-zinc-600 rounded-md bg-zinc-800 text-white hover:bg-zinc-700 transition ml-2 mt-4 "
+              className="ln flex items-center gap-2 px-4 py-2 border border-zinc-600 rounded-md bg-zinc-800 text-white hover:bg-zinc-700 transition ml-2"
             >
               <img
                 src={
@@ -163,7 +163,7 @@ const Footer = () => {
             )}
           </div>
 
-          <p className="text-zinc-500 text-8 reveal-up">
+          <p className="text-zinc-500 text-8 reveal-up ">
             &copy; 2025 <span className="text-zinc-200">Bilel Habibi</span>
           </p>
         </div>
