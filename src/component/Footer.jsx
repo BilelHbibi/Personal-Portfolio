@@ -99,7 +99,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="flex items-center justify-between pt-10 mb-14">
+        <div className="flex justify-between mt-10 mb-15">
           <a href="/" className="logo reveal-up">
             <img src="./images/logo.svg" width={40} height={40} alt="logo" />
           </a>
@@ -108,7 +108,7 @@ const Footer = () => {
           <div className="relative" ref={dropdownRef}>
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="flex items-center gap-2 px-4 py-2 border border-zinc-600 rounded-md bg-zinc-800 text-white hover:bg-zinc-700 transition ml-2 mt-8"
+              className="flex items-center gap-2 px-4 py-2 border border-zinc-600 rounded-md bg-zinc-800 text-white hover:bg-zinc-700 transition ml-2 mt-4 "
             >
               <img
                 src={
