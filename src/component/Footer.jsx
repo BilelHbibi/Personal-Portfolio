@@ -19,7 +19,12 @@ const Footer = () => {
 
   const handleLanguageChange = (lang) => {
     localStorage.setItem("lang", lang);
-    window.location.reload();
+    history.scrollRestoration = "manual"; // désactive la restauration auto du scroll
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  
+    setTimeout(() => {
+      window.location.reload();
+    }, 500);
   };
   
 
@@ -100,10 +105,10 @@ const Footer = () => {
           </a>
 
           {/* Custom Language Dropdown */}
-          <div className="relative mt-7" ref={dropdownRef}>
+          <div className="relative" ref={dropdownRef}>
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="flex items-center gap-2 px-4 py-2 border border-zinc-600 rounded-md bg-zinc-800 text-white hover:bg-zinc-700 transition ml-2"
+              className="flex items-center gap-2 px-4 py-2 border border-zinc-600 rounded-md bg-zinc-800 text-white hover:bg-zinc-700 transition ml-2 mt-8"
             >
               <img
                 src={
