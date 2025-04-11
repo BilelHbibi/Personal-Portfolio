@@ -101,7 +101,7 @@ const Footer = () => {
 
         <div className="flex justify-between mt-10 mb-15 last">
           <a href="/" className="logo reveal-up">
-            <img src="./images/logo.svg" width={40} height={40} alt="logo" />
+            <img src="./images/logo3.png" width={80} height={80} alt="logo" />
           </a>
 
           {/* Custom Language Dropdown */}
